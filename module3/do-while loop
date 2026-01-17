@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    cout << "=== PLAYER REGISTRATION ===" << endl;    
+    
+    // Validate player level (1-10)
+    int playerLevel;
+    do {
+        cout << "Enter your player level (1-10): ";
+        cin >> playerLevel;        
+        
+        if (playerLevel < 1 || playerLevel > 10) {
+            cout << "Invalid level! Please try again." << endl;
+        }
+    } while (playerLevel < 1 || playerLevel > 10);    
+    
+    // Crucial: Clear the buffer after 'cin >>'
+    cin.ignore(100, '\n'); 
+
+    cout << "Valid level entered: " << playerLevel << endl;    
+
+    // Validate player name (non-empty)
+    string playerName;
+    do {
+        cout << "Enter your player name (cannot be empty): ";
+        getline(cin, playerName);        
+        
+        if (playerName.empty()) {
+            cout << "Name cannot be empty! Please try again." << endl;
+        }
+        else if(playerName.length () <= 2){
+            cout << "name is not long" << endl ;
+        }
+    } while (playerName.empty() || playerName.length() <= 2);    
+
+    cout << "Welcome, " << playerName << " (Level " << playerLevel << ")!" << endl;    
+
+    return 0;
+}
