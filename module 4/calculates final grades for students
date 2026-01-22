@@ -1,0 +1,72 @@
+#include <iostream>
+#include <string>
+using namespace std ;
+
+
+
+int main() {
+   
+   double score1 , score2 , score3 , average ;
+   string name ;
+   // your code 
+   cout << "give your name first :" << endl;
+   getline( cin , name );
+
+   cout << " give all 3 scores : " << endl;
+   cin >> score1 ;
+  
+      while (score1 < 0 || score1 > 100) {
+     
+      cout << " rewrite again ( 0 - 100) :  " << endl ;
+      cin >> score1 ;
+      }
+
+      cout << " you score1 is : " << score1 << endl ;
+      
+      
+      
+  
+   
+   cin >> score2 ;
+   while (score2 < 0 || score2 > 100)
+   {
+      cout << "rewrite again (0 - 100) : " << endl ;
+      cin >> score2 ;
+   }
+   cout << " you score2 is : " << score2 << endl ;
+   
+   cin >> score3 ;
+   while (score3 < 0 || score3 > 100)
+   {
+      cout << " rewrite agian (0 - 100) : " << endl ;
+      cin >> score3 ;
+   }
+   cout << " you score3 is : " << score3 << endl ;
+   
+   average = (score1+score2+score3) / 3 ;
+   if (average >= 90)
+   {
+      cout << "your score final is : " << average << " leter A"<< endl ;
+      
+   } else if (average >= 80 )
+   {
+      cout << "your score final is : " << average << " leter B"<< endl ;
+   } else if (average >= 70)
+   {
+      cout << "your score final is : " << average << " leter C"<< endl ;
+   } else if (average >= 60)
+   {
+      cout << "your score final is : " << average << " leter D"<< endl ;
+   } else {
+      cout << "your score final is : " << average << " leter F"<< endl ;
+   }
+   
+   
+   
+   
+
+   return 0 ;
+   
+
+   
+}
