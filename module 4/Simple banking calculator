@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+    double principal, rate, years, amount;
+
+    cout << "Hi, can you please give you deposit ? " << endl;
+    cin >> principal;
+    while (principal < 0)
+    {
+        cout << "Please no negative number, try again : " << endl ;
+        cin >> principal; 
+    }
+    cout << "your deposit is :" << principal << " $" << endl ;
+
+    cout << " please enter your rate :" ;
+    cin >> rate ;
+    while (rate < 2)
+    {
+        cout << " please rate should 2% or more " << endl ;
+        cin >> rate ;
+    }
+    cout << " your choose rate :" << rate << " %" << endl ;
+
+    cout << " please choose years : " << endl ;
+    cin >> years;
+    while (years < 1)
+    {
+        cout << "minimum years is 1 so choose again :" << endl ;
+        cin >> years ;
+    }
+    cout << " you choose number of years is :" << years << endl ;
+
+    cout << "-----------------------------------------------------------------------" << endl ;
+    cout << "Summary: Deposit $" << principal << " at " << rate << "% for " << years << " years." << endl;
+    
+    
+    //amount = principal * pow(1 + (rate / 100), years);
+    amount = principal * pow(1 + (rate/100),years);
+    cout << " the final amount is " << amount << endl;
+
+    return 0;
+}
